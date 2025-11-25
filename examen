@@ -1,0 +1,26 @@
+mnbdef programa_creciente():
+    num_anterior = float(input("Introduce un número: "))
+    sum_nums = num_anterior
+    max_num = num_anterior
+
+    es_creciente = True
+
+    for i in range(9):
+        num = float(input("Introduce otro número: "))
+        sum_nums += num
+
+        if num <= num_anterior:
+            es_creciente = False
+        num_anterior = num
+
+        if num > max_num:
+            max_num = num
+
+    print("The largest number is:", max_num)
+    print("The average is:", sum_nums / 10)
+
+    if es_creciente:
+        print("La sucesión ES creciente")
+    else:
+        print("La sucesión NO es creciente")
+programa_creciente()
